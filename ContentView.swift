@@ -54,7 +54,7 @@ struct ContentView: View {
                 HStack{
                     Spacer()
                     Button(action:{
-                        showsheet.toggle()
+                        showalert.toggle()
                     }){
                         Image(systemName: "plus")
                             .frame(width: 40,height: 40)
@@ -62,7 +62,7 @@ struct ContentView: View {
                             .foregroundColor(.white)
                             .background(Color.black)
                             .clipShape(Circle())
-                    }.sheet(isPresented:$showsheet){
+                    }.sheet(isPresented:$showalert){
                         Inputsheet()
                             .presentationDetents([.height(120), .medium])
                     }.padding()
